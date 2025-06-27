@@ -1,0 +1,15 @@
+meta {
+  name: Récupérer un document en GED
+  type: http
+  seq: 24
+}
+
+get {
+  url: {{urlNovanet}}/api/documents/ged/{{idFichier}}
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearer}}
+}

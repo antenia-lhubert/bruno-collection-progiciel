@@ -1,0 +1,55 @@
+meta {
+  name: Créer un devis
+  type: http
+  seq: 30
+}
+
+post {
+  url: {{urlNovanet}}/api/clients/{{numClient}}/createDevis/MRHP
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearer}}
+}
+
+body:json {
+  {
+    "effectiveDate": "2021-09-21T13:12:58.871Z",
+    "insurancePackageCode": null,
+    "splittingCode": "M",
+    "movementType": null,
+    "movementCode": "AN",
+    "discountPercentage": 0,
+    "debitDay": 5,
+    "businessProvider3" : null,
+    "riskInformation": [
+      {
+        "code": "CAPITAL_MOBILIER",
+        "value": "12000"
+      }, {
+        "code": "NB_PIECES",
+        "value": "3"
+      }, {
+       "code": "OBJET_VALEUR",
+        "value": "10"
+      }, {
+       "code": "QUALITE",
+       "value": "LOC"
+      }, {
+       "code": "ZONE",
+       "value": "59000"
+      }, {
+       "code": "LOCATION_MEUBLEE",
+       "value": "non"
+      }, {
+       "code": "LOCATION_TEMPO",
+       "value": "oui"
+      }, {
+       "code": "VERANDA",
+       "value": "non"
+      }
+    ]
+  }
+}

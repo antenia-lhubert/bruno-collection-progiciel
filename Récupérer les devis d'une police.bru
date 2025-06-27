@@ -1,0 +1,20 @@
+meta {
+  name: Récupérer les devis d'une police
+  type: http
+  seq: 27
+}
+
+get {
+  url: {{urlNovanet}}/api/clients/{{numClient}}/devis?nbDevis=5&expire=true
+  body: none
+  auth: bearer
+}
+
+params:query {
+  nbDevis: 5
+  expire: true
+}
+
+auth:bearer {
+  token: {{bearer}}
+}

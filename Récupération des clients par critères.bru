@@ -1,0 +1,48 @@
+meta {
+  name: Récupération des clients par critères
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{urlNovanet}}/api/clients/?champs=champs4&champs=champs5&ville=Hazebrouck
+  body: none
+  auth: bearer
+}
+
+params:query {
+  champs: champs4
+  champs: champs5
+  ville: Hazebrouck
+  ~nom: 
+  ~prenom: 
+  ~nom2: 
+  ~adresse: 
+  ~select1: 
+  ~select2: 
+  ~select3: 
+  ~select4: 
+  ~select5: 
+  ~select6: 
+  ~select7: 
+  ~select8: 
+  ~select9: 
+  ~siret: 
+  ~cleacces: 
+  ~idUnique: 
+  ~base: 
+  ~basePlus: true
+  ~basePremium: true
+  ~cleacces: 
+}
+
+auth:bearer {
+  token: {{bearer}}
+}
+
+docs {
+  Récupère une liste des clients qui respectent les filtres passé en queryParams. 
+  
+  Le volume des données retournées est modifiable selon le mode choisi (base/basePlus/basePremium)
+  
+}

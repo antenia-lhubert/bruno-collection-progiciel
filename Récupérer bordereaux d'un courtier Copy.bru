@@ -1,0 +1,20 @@
+meta {
+  name: Récupérer bordereaux d'un courtier Copy
+  type: http
+  seq: 33
+}
+
+get {
+  url: {{urlNovanet}}/api/delegataires/{{numDelegataire}}/bordereaux
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~dateDu: 2021-03-01
+  ~dateAu: 2021-11-24
+}
+
+auth:bearer {
+  token: {{bearer}}
+}

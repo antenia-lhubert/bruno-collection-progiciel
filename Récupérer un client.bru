@@ -1,0 +1,19 @@
+meta {
+  name: Récupérer un client
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{urlNovanet}}/api/clients/{{numClient}}
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearer}}
+}
+
+docs {
+  Récupère les informations d'un client grâce à son numClient.
+}

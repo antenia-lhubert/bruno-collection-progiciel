@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "WS_REST_PROGICIEL",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Création ou mise à jour d'un délégataire
+  type: http
+  seq: 15
+}
+
+post {
+  url: {{urlNovanet}}/api/delegataires/{{numDelegataire}}
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearer}}
+}
+
+body:json {
+  {"type":"C","idUnique":"testWS","nom":"Alexis test","nom2":"ws cou","adresse":"test","adresse2":"test","codePostal":"test","ville":"LENS","pays":"","numeroTelephone1":"0606060606","email":"abels@leaderinfo.com","commercial":"cfdp1","select1":"Intermédiaire Assurances","select2":"Courtier en assurance","select3":null,"select4":"toto1","select5":"f","select6":"EC","select7":"Agent Général","select8":"pouet8","select9":"EC","codeNaf":"45.11Z","formJurid":"EURL","nombreSalaries":"2","ca":"100","activite":"45.11Z","siret":"12345678912345","dateCreationEntreprise":"2020-01-01","entite":"06","adresse3":"test","actif":true,"encaissementConfiee":true}
+}

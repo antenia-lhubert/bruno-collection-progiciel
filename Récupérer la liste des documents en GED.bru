@@ -1,0 +1,23 @@
+meta {
+  name: Récupérer la liste des documents en GED
+  type: http
+  seq: 25
+}
+
+get {
+  url: {{urlNovanet}}/api/documents/ged/?numDevis=TEST
+  body: json
+  auth: bearer
+}
+
+params:query {
+  numDevis: TEST
+  ~numPolice: 
+  ~numDelegataire: 69ASTRIS
+  ~publiable: 
+  ~numClient: 105255719
+}
+
+auth:bearer {
+  token: {{bearer}}
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Récupérer les cotisations avec plus de détails
+  type: http
+  seq: 13
+}
+
+get {
+  url: {{urlNovanet}}/api/polices/{{numPolice}}/comptas/cotisationsDetails
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearer}}
+}

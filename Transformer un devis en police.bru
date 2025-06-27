@@ -1,0 +1,19 @@
+meta {
+  name: Transformer un devis en police
+  type: http
+  seq: 31
+}
+
+post {
+  url: {{urlNovanet}}/api/devis/{{numDevis}}/transform
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearer}}
+}
+
+body:multipart-form {
+  file: @file(/C:/Users/abels/Desktop/ncheque.xlsx)
+}

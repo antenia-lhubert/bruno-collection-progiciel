@@ -1,0 +1,21 @@
+meta {
+  name: Récupérer une police
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{urlNovanet}}/api/polices/{{numPolice}}?basePremium=true
+  body: none
+  auth: bearer
+}
+
+params:query {
+  basePremium: true
+  ~base: true
+  ~basePlus: true
+}
+
+auth:bearer {
+  token: {{bearer}}
+}

@@ -1,0 +1,20 @@
+meta {
+  name: Mettre un document en GED ALFRESCO
+  type: http
+  seq: 22
+}
+
+post {
+  url: {{urlNovanet}}/api/documents/gedAlfresco
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearer}}
+}
+
+body:multipart-form {
+  file: @file(/C:/Users/abels/Desktop/ribéeè.xlsx)
+  toolsDTO: {"gestion":"abels","lienClient":null,"police":"7619PO2434","nSin":null,"idFlotte":null,"numDevis":null,"publiable":false,"numeroContact":null,"numAvenant":null,"idPersonne":null,"lettre_type":"Avis Echeance fractionnée","numClient":"","numDelegataire":"null"}
+}

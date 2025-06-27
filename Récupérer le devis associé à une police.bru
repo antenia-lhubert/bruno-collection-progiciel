@@ -1,0 +1,30 @@
+meta {
+  name: Récupérer le devis associé à une police
+  type: http
+  seq: 26
+}
+
+get {
+  url: {{urlNovanet}}/api/polices/{{numPolice}}/devisAssocie?listeParamVarchar=true
+  body: none
+  auth: bearer
+}
+
+params:query {
+  listeParamVarchar: true
+  ~base: null
+  ~basePlus: null
+  ~basePremium: null
+  ~notes: true
+  ~histoModification: null
+  ~formules: true
+  ~repartitionPrime: true
+  ~personnes: true
+  ~listeComplementaire: null
+  ~listeParamInteger: null
+  ~listeParamDate: null
+}
+
+auth:bearer {
+  token: {{bearer}}
+}

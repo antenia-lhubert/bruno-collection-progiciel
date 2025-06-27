@@ -1,0 +1,20 @@
+meta {
+  name: Envoyer un email
+  type: http
+  seq: 21
+}
+
+post {
+  url: {{urlNovanet}}/api/documents/email
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearer}}
+}
+
+body:multipart-form {
+  toolsDTO: {"emailEmeteur":"novanet@antenia.fr","emailRecepteur":[ "saumurot.morgane@gmail.com","tchobels@gmail.com","alexis.bels@outlook.fr"],"libEmetteur":"Alexis Bels","body":"Bonjour,<br/>L'adhérent ci-dessous souhaite exercer ses droits concernant ses données personnelles.<br/>Merci de prendre en charge cette demande.<br/>Cordialement,<br/>L'équipe Cocoon <br/><br/><br/><hr/><ul><li>Nom : Dupont</li><li>Prénom : Robert</li><li>Email : robert.dupont@gmail.com</li><li>Numéro d'adhérent : 12345</li><li>Num de téléphone mobile : </li><li>Num de téléphone fixe : </li></ul>Objet : L'exercice de mon droit d'opposition <br/>Demande : <br/>","sujet":"TEST"}
+  file: @file(/C:/Users/abels/Desktop/ncheque.xlsx)
+}

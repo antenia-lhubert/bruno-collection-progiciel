@@ -1,0 +1,52 @@
+meta {
+  name: Recupérer les polices d'un clients
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{urlNovanet}}/api/clients/{{numClient}}/polices
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~base: 
+  ~basePlus: 
+  ~basePremium: 
+  ~garantie: 
+  ~prodGarMaster: 
+  ~apporteur: 
+  ~convention: 
+  ~conventionWF: 
+  ~wf: 
+  ~echeancier: true
+  ~risque: 
+  ~garSin: 
+  ~coass: 
+  ~reass: 
+  ~police: 
+  ~clepolice: 
+  ~numPolice: 
+  ~compagnie: 
+  ~entite: 
+  ~ancpolice: 
+  ~nomscrp: 
+  ~select1: 
+  ~select2: 
+  ~select3: 
+  ~select4: 
+  ~select5: 
+  ~select6: 
+  ~select7: 
+  ~select8: 
+  ~typpol: 
+  ~cie: 
+  ~dateffet: 
+  ~datavenant: 
+  ~referenceExterne: 
+}
+
+auth:bearer {
+  token: {{bearer}}
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Faire un courrier
+  type: http
+  seq: 19
+}
+
+post {
+  url: {{urlNovanet}}/api/documents/courrier/{{nomCourrier}}/fusion
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearer}}
+}
+
+body:json {
+  {"destinaire":"Souscripteur","numClient":"879","numPolice":"6920PO2878","nsin":null,"idProdGarMaster":null,"numReg":null,"typeQuittance":null,"ordreQuittance":null,"numQuittance":null,"idCompta":null,"necr":null,"idComptaDelegataire":null,"numQuittanceDelegataire":null,"codeGarantie":null,"numDelegataire":"07TEST","idPersonne":null,"idFlotte":null,"idSuccursale":null,"idDecompte":null,"setIdAyantDroit":null,"numeroCarteVerte":null,"typeCarteVerte":null,"champsComplementaires":null,"mapChampsDestinataire":null,"copie":null,"mapChampsCopie":null,"typeExp":null,"nomExp":null,"mailExp":null}
+}

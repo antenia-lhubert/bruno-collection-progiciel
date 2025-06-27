@@ -1,0 +1,81 @@
+meta {
+  name: Récupérer la flotte d'une police avec choix du retour
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{urlNovanet}}/api/polices/{{numPolice}}/flottes/{{idFlotte}}/detailsCustom?societeUser=true&police=true&idFlottes=true&flotteParams=true&quizz=true&champs=champs0&champs=champs1
+  body: none
+  auth: bearer
+}
+
+params:query {
+  societeUser: true
+  police: true
+  idFlottes: true
+  flotteParams: true
+  quizz: true
+  champs: champs0
+  champs: champs1
+  ~immat: 
+  ~marque: 
+  ~modele: 
+  ~version: 
+  ~dateMiseCirculation: 
+  ~groupe: 
+  ~puissFiscal: 
+  ~puissReelle: 
+  ~cylindre: 
+  ~alimentation: 
+  ~valeur: 
+  ~classe: 
+  ~pv: 
+  ~ptc: 
+  ~ptr: 
+  ~categorie: 
+  ~nbPlaces: 
+  ~mine: 
+  ~gta: 
+  ~numSerie: 
+  ~usag: 
+  ~nomConducteur: 
+  ~centre: 
+  ~zone: 
+  ~conduiteExcl: 
+  ~garage: 
+  ~volClef: 
+  ~creditBail: 
+  ~vetuste: 
+  ~info: 
+  ~marquage: 
+  ~sra: 
+  ~dateEntree: 
+  ~dateSortie: 
+  ~debutGarantie: 
+  ~finGarantie: 
+  ~etat: 
+  ~tarif: 
+  ~formule: 
+  ~coef: 
+  ~primAnHt: 
+  ~primAnTtc: 
+  ~comptantHt: 
+  ~comptantTtc: 
+  ~modification: 
+  ~type: 
+  ~reference: 
+  ~genre: 
+  ~dateFacturation: 
+  ~idFact: 
+  ~idObjetRisque: 
+  ~idUnique: 
+  ~paysImmat: 
+  ~statutFva: 
+  ~succursaleId: 
+  ~id: 
+}
+
+auth:bearer {
+  token: {{bearer}}
+}

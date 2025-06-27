@@ -1,0 +1,23 @@
+meta {
+  name: Récupérer les cotisations
+  type: http
+  seq: 12
+}
+
+get {
+  url: {{urlNovanet}}/api/polices/{{numPolice}}/comptas/cotisations?flagRelance=M&flagRelance=A
+  body: none
+  auth: bearer
+}
+
+params:query {
+  flagRelance: M
+  flagRelance: A
+  ~dateDebut: 
+  ~dateFin: 
+  ~nbMois: 
+}
+
+auth:bearer {
+  token: {{bearer}}
+}

@@ -1,0 +1,81 @@
+meta {
+  name: Récupérer les flottes d'une police
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{urlNovanet}}/api/polices/{{numPolice}}/flottes/?champs=champs0&champs=champs1
+  body: none
+  auth: bearer
+}
+
+params:query {
+  champs: champs0
+  champs: champs1
+  ~societeUser: true
+  ~police: true
+  ~idFlottes: true
+  ~immat: 
+  ~marque: 
+  ~modele: 
+  ~version: 
+  ~dateMiseCirculation: 
+  ~groupe: 
+  ~puissFiscal: 
+  ~puissReelle: 
+  ~cylindre: 
+  ~alimentation: 
+  ~valeur: 
+  ~classe: 
+  ~pv: 
+  ~ptc: 
+  ~ptr: 
+  ~categorie: 
+  ~nbPlaces: 
+  ~mine: 
+  ~gta: 
+  ~numSerie: 
+  ~usag: 
+  ~nomConducteur: 
+  ~centre: 
+  ~zone: 
+  ~conduiteExcl: 
+  ~garage: 
+  ~volClef: 
+  ~creditBail: 
+  ~vetuste: 
+  ~info: 
+  ~marquage: 
+  ~sra: 
+  ~dateEntree: 
+  ~dateSortie: 
+  ~debutGarantie: 
+  ~finGarantie: 
+  ~etat: 
+  ~tarif: 
+  ~formule: 
+  ~coef: 
+  ~primAnHt: 
+  ~primAnTtc: 
+  ~comptantHt: 
+  ~comptantTtc: 
+  ~modification: 
+  ~type: 
+  ~reference: 
+  ~genre: 
+  ~dateFacturation: 
+  ~idFact: 
+  ~idObjetRisque: 
+  ~idUnique: 
+  ~paysImmat: 
+  ~statutFva: 
+  ~succursaleId: 
+  ~flotteParams: 
+  ~id: 
+  ~quizz: 
+}
+
+auth:bearer {
+  token: {{bearer}}
+}

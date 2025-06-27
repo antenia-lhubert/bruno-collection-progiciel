@@ -1,0 +1,15 @@
+meta {
+  name: Récupérer la flotte d'une police
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{urlNovanet}}/api/polices/{{numPolice}}/flottes/{{idFlotte}}
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearer}}
+}

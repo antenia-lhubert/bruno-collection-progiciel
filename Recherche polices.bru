@@ -1,0 +1,50 @@
+meta {
+  name: Recherche polices
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{urlNovanet}}/api/polices/search?allege=false&limit=10&date=2021-05-20
+  body: none
+  auth: bearer
+}
+
+params:query {
+  allege: false
+  limit: 10
+  date: 2021-05-20
+  ~offset: 0
+  ~nom: L'ART EN BOITE
+  ~prenom: test't
+  ~nomscrp: PPA-COVID
+  ~codepscrp: 
+  ~dateffetmax: 
+  ~dateffetmin: 
+  ~siret: 123456789
+  ~ec: true
+  ~su: true
+  ~ctu: true
+  ~ess: true
+  ~fisc: 
+  ~immo: 
+  ~mpub: 
+  ~part: 
+  ~prof: 
+  ~di: true
+  ~dgo: true
+  ~asc: true
+  ~champ: police
+  ~police: 695YBEINDIV208
+  ~apporteur2: 
+}
+
+auth:bearer {
+  token: {{bearer}}
+}
+
+docs {
+  Retourne une liste de police respectant les filtres en paramètre.
+  
+  Le volume de données retournées est paramétrable selon le mode choisi (allege ou non)
+}

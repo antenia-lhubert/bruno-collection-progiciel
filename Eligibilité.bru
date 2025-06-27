@@ -1,0 +1,22 @@
+meta {
+  name: Eligibilité
+  type: http
+  seq: 34
+}
+
+get {
+  url: {{urlNovanet}}/api/controles/eligilite-entreprise?codeIA=69Z69&codePays=FR&dateReference=2022-06-30&identifiant=38866701600033
+  body: none
+  auth: bearer
+}
+
+params:query {
+  codeIA: 69Z69
+  codePays: FR
+  dateReference: 2022-06-30
+  identifiant: 38866701600033
+}
+
+auth:bearer {
+  token: 
+}

@@ -1,0 +1,20 @@
+meta {
+  name: Mise à jour d'un RIB
+  type: http
+  seq: 16
+}
+
+post {
+  url: {{urlNovanet}}/api/polices/{{numPolice}}/editRib
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearer}}
+}
+
+body:json {
+  {"policeDTO":{"domicil":"LCL","jourPrlv":"10","nomRib":"test2","iban":"FR8330001002244100X05000807","bic":"BDFEFRPPCCT","rum":"RUM10002001247615XP321"},"dateAvenant":"2021-02-24"}
+  
+}

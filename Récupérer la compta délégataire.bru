@@ -1,0 +1,30 @@
+meta {
+  name: Récupérer la compta délégataire
+  type: http
+  seq: 28
+}
+
+get {
+  url: {{urlNovanet}}/api/delegataires/{{numDelegataire}}/comptas?dateDebutMin=2021-06-01&dateDebutMax=2021-07-31&modePaiement=CH&modePaiement=VI&etatExclu=R&etatExclu=S&etatExclu=W
+  body: none
+  auth: bearer
+}
+
+params:query {
+  dateDebutMin: 2021-06-01
+  dateDebutMax: 2021-07-31
+  modePaiement: CH
+  modePaiement: VI
+  etatExclu: R
+  etatExclu: S
+  etatExclu: W
+  ~numPolice: 6921PO2545
+  ~dateFinMin: 
+  ~dateFinMax: 
+  ~modePaiement: PRIA
+  ~modePaiement: PR
+}
+
+auth:bearer {
+  token: {{bearer}}
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Faire un encaissement
+  type: http
+  seq: 29
+}
+
+post {
+  url: {{urlNovanet}}/api/delegataires/{{numDelegataire}}/comptas/encaissement
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearer}}
+}
+
+body:json {
+  {"modePaiement":"VI","dateEncaissement":"2021-10-27","reference":"abels1","quittances":[{"num":179764,"montant":30,"comdeduite":false}]}
+}
