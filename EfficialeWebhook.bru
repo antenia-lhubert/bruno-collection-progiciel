@@ -1,0 +1,27 @@
+meta {
+  name: EfficialeWebhook
+  type: http
+  seq: 35
+}
+
+post {
+  url: {{urlNovanet}}/api/webhook/GDAPPEEfficialeUpdateStatusWebhook/{{societeuser}}
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "type": "status_updated",
+    "token": "01JZMWYFbtpVMYrb",
+    "id": "25062025_PPENA_2645545_100",
+    "internal_id": "C-204",
+    "person_name": "Emmanuel MACRON",
+    "result_name": "Emmanuel Macron",
+    "updated_status": "confirmed",
+    "pending_gel_alerts": 0,
+    "confirmed_gel_alerts": 0,
+    "pending_ppe_alerts": 0,
+    "confirmed_ppe_alerts": 1
+  }
+}
